@@ -1,0 +1,35 @@
+﻿body{
+	margin:0;
+	padding:0;
+}
+
+.adventure-div{
+	margin-left:10px;
+	height:99%;
+	width:98%;
+	border:1px solid black;
+}
+
+.navigator-div{
+	position:fixed;
+	left:-140px;
+	height:100%;
+	width:150px;
+	border: 1px solid red;
+	background-color:green;
+	transition-property:transform;
+	transition-duration:1s;
+	transition-timing-function:linear;
+}
+
+.navigator-div:hover{
+	transform:translate(140px);
+}
+
+.role-img{
+	position:relative;
+	width:75px;
+	height:110px;
+	margin:0;
+	z-index:-1;
+}
