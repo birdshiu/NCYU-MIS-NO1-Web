@@ -6,12 +6,12 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 .wrapper {
-	width: 1170px;
+	width: 1150px;
 	margin: auto;
 }
 header {
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./background.jpg);
-	height: 120vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(./background.png);
+	height: 140vh;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
@@ -20,7 +20,7 @@ header {
 .nav-area {
 	float: right;
 	list-style: none;
-	margin-top: 60px;
+	margin-top: 50px;
 }
 .nav-area li {
 	display: inline-block;
@@ -28,7 +28,7 @@ header {
 .nav-area li a {
 	color: #fff;
 	text-decoration: none;
-	padding: 40px 40px;
+	padding: 30px 40px;
 	font-family: fantasy;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -48,7 +48,7 @@ header {
 	position: absolute;
 	width: 600px;
 	height: 300px;
-	margin: 20% 30%;
+	margin: 10% 30%;
 	text-align: center;
 }
 .welcome-text h1 {
@@ -58,21 +58,21 @@ header {
 	font-size: 50px;
 }
 .welcome-text h1 span {
-	color: #00fecb;
+	color: 	#00EC00;
 }
 .welcome-text a {
-	border: 1px solid #fff;
-	padding: 20px 40px;
+	border: 1px solid #adadad;
+	padding: 30px 40px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 40px;
 	font-family: fantasy;
 	margin-top: 20px;
 	display: inline-block;
-	color: #fff;
+	color: #000;
 }
 .welcome-text a:hover {
-	background: #fff;
+	background: #00000000;
 	color: #333;
 }
 /*resposive*/
@@ -86,9 +86,6 @@ header {
 		width: 50%;
 		text-align: center;
 		margin: auto;
-	}
-	img {
-		width: ;
 	}
 	.nav-area {
 		float: none;
