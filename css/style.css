@@ -4,18 +4,11 @@
 }
 body {
 	font-family: 'Poppins', sans-serif;
+	background-image:url(../Image/background.png);
 }
 .wrapper {
 	width: 1150px;
 	margin: auto;
-}
-header {
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../Image/background.png);
-	height: 140vh;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center center;
-	position: relative;
 }
 .nav-area {
 	float: right;
@@ -47,7 +40,7 @@ header {
 .welcome-text {
 	position: absolute;
 	width: 600px;
-	height: 300px;
+	height: 100px;
 	margin: 10% 30%;
 	text-align: center;
 }
@@ -74,6 +67,10 @@ header {
 .welcome-text a:hover {
 	background: #00000000;
 	color: #333;
+}
+
+.welcome-text img{
+	height:300px;
 }
 /*resposive*/
 
