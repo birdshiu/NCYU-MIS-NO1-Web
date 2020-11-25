@@ -3,16 +3,37 @@
 	padding:0;
 }
 
+table{
+	width:100%;
+	height:100%;
+	border:1px solid red;
+	table-layout: fixed;
+}
+
+td{
+	vertical-align:center;
+	width:5%;
+	border 2px solid red;
+	padding:0;
+}
+
+tr{
+	height:10%;
+	padding:0;
+}
+
 .adventure-div{
-	margin-left:10px;
-	height:99%;
-	width:98%;
+	margin-top:15px;
+	margin-left:30px;
+	height:95%;
+	width:95%;
 	border:1px solid black;
 }
 
 .navigator-div{
 	position:fixed;
 	left:-140px;
+	top:0px;
 	height:100%;
 	width:150px;
 	border: 1px solid red;

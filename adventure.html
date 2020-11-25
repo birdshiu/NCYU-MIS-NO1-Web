@@ -13,12 +13,51 @@
 			</ul>
 		</div>
 		<div class="adventure-div">
-			<img src="Image/Role/frame-1.png" class="role-img" id="role-img">
-			<img src="Image/Role/frame-1.png" height="100px" width="auto">
+			<table>
+			</table>
 		</div>
-		<div class="adventure-div"></div>
+		<div class="adventure-div">
+			<table>
+			</table>
+		</div>
 	</body>
 	
-	<script src="./js/RoleMove.js">
+	<script>
+		var BasicW, BasicH;
+		var roleImage=document.createElement('img');
+		roleImage.src="./Image/Role/frame-1.png"
+		roleImage.style="left-margin:auto; right-margin:auto;"
+		
+		function setRole(level ,x, y){
+			let target=document.getElementsByTagName('table');
+			target=target[level];
+			
+			target=target.getElementsByTagName('tr')[x];
+			target=target.getElementsByTagName('td')[y];
+			
+			target.appendChild(roleImage);
+		}
+		
+		let adventureDiv=document.getElementsByClassName('adventure-div');
+		window.onload=function(){
+			for(let ad of adventureDiv){
+				let tmpTr;
+				console.log(ad);
+				let table=ad.getElementsByTagName('table')[0];
+				for(let i=0;i<10;i++){
+					tmpTr=document.createElement("tr");
+					for(let j=0;j<20;j++){
+						tmpTr.appendChild(document.createElement("td"));
+					}
+					table.appendChild(tmpTr);
+				}
+			}
+			
+			BasicW=document.getElementsByTagName('td')[0].offsetWidth;
+			BasicH=document.getElementsByTagName('td')[0].offsetHeight;
+			roleImage.height=BasicH;
+			
+			setRole(0, 0, 0);
+		}
 	</script>
 </html>
