@@ -15,6 +15,7 @@
 		<div class="adventure-div">
 			<table>
 			</table>
+			<img src="./Image/Role/frame-1.png" class="role-image">
 		</div>
 		<div class="adventure-div">
 			<table>
@@ -24,40 +25,61 @@
 	
 	<script>
 		var BasicW, BasicH;
-		var roleImage=document.createElement('img');
-		roleImage.src="./Image/Role/frame-1.png"
-		roleImage.style="left-margin:auto; right-margin:auto;"
+		var roleImage=document.getElementsByClassName('role-image')[0];
+		var adventureDivs=document.getElementsByClassName('adventure-div');
+		const XStep=20;
+		const YStep=10;
 		
-		function setRole(level ,x, y){
-			let target=document.getElementsByTagName('table');
-			target=target[level];
-			
-			target=target.getElementsByTagName('tr')[x];
-			target=target.getElementsByTagName('td')[y];
-			
-			target.appendChild(roleImage);
+		var roleAnimation={
+			isGoOn:false,
+			ImageId:1,
+			aniId:1,
+			start:function(){
+				let self=this;
+				console.log('ok');
+				if(self.isGoOn === false){
+					self.isGoOn=true;
+					this.aniId=setInterval(function(){
+						self.ImageId=(self.ImageId+1)%5 ? (self.ImageId+1)%5:5;
+						roleImage.src=`./Image/Role/frame-${self.ImageId}.png`;
+					},100);
+				}
+			},
+			stop:function(){
+				let self=this;
+				if(self.isGoOn === true){
+					self.isGoOn=false;
+					clearInterval(self.aniId);
+				}
+			}
+		};
+		
+		function setRole(x, y){
+			let div=document.getElementsByClassName('adventure-div')[0];
+			roleImage.style.top=(div.offsetTop+BasicH*y)+"px";
+			roleImage.style.left=(div.offsetLeft+BasicW*x)+"px";
 		}
 		
 		let adventureDiv=document.getElementsByClassName('adventure-div');
-		window.onload=function(){
-			for(let ad of adventureDiv){
-				let tmpTr;
-				console.log(ad);
-				let table=ad.getElementsByTagName('table')[0];
-				for(let i=0;i<10;i++){
-					tmpTr=document.createElement("tr");
-					for(let j=0;j<20;j++){
-						tmpTr.appendChild(document.createElement("td"));
-					}
-					table.appendChild(tmpTr);
-				}
-			}
+		window.onload=function(){	
+			BasicW=document.getElementsByClassName('adventure-div')[0].offsetWidth/XStep;
+			BasicH=document.getElementsByClassName('adventure-div')[0].offsetHeight/YStep;
 			
-			BasicW=document.getElementsByTagName('td')[0].offsetWidth;
-			BasicH=document.getElementsByTagName('td')[0].offsetHeight;
 			roleImage.height=BasicH;
+			roleImage.width=BasicW;
 			
-			setRole(0, 0, 0);
+			setRole(19, 0);
 		}
+		
+		adventureDivs[0].addEventListener('click', (event)=>{
+			let targetX=Math.floor(event.offsetX/BasicW);
+			let targetY=Math.floor(event.offsetY/BasicH);
+			
+			setRole(targetX, targetY);
+		})
+		
+		roleImage.addEventListener('click', (event)=>{
+			event.stopPropagation(); //按到圖片會怪怪的
+		});
 	</script>
 </html>
