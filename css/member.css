@@ -1,0 +1,87 @@
+html, body{
+	padding:0;
+	margin:0;
+}
+.div1{
+	float:left;
+	width:150px;
+	margin-left:30px;
+}
+.body{
+	background-color:#ACD6FF;
+}
+.square {
+	width: 150px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+.content img{
+	margin-left:20px;
+	margin-top:0px;
+}
+.content img:hover{
+	width:180px;
+}
+.menu{
+	
+	display:inline-block;
+}
+nav a{
+	margin-left:3px;
+	margin-right:3px;
+	color: inherit; /* 移除超連結顏色 */
+	text-decoration: none;
+}
+nav li:hover {
+    background-color: rgb(115, 115, 115);
+    color: white;
+}
+.menu li{
+	display:inline-block;
+}
+.sitebody{
+	padding:0px;
+	width:100%;
+	margin:0;
+	font-size:13px;
+}
+.header{
+	margin-top:-20px;
+	background-color:#D2E9FF;
+	height:80px;
+	text-align:left;
+	line-height:80px;
+}
+.sidebar_left{
+	background-color:yellow;
+	width:300px;
+	height:500px;
+	text-align:center;
+	line-height:400px;
+	float:left;
+}
+.sidebar_right{
+	background-color:yellow;
+	width:300px;
+	height:500px;
+	text-align:center;
+	line-height:400px;
+	float:right;
+}
+.content{
+	margin-top:-30px;
+	margin-left:120px;
+	margin-right:120px;
+	height:250px;
+	background-color:#D2E9FF;
+	text-align:center;
+	line-height:300px;
+}
+.footer{
+	margin-top:-200px;
+	clear:both;
+	height:100px;
+	background-color:green;
+	text-align:center;
+	line-height:100px;
+}
