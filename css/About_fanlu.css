@@ -1,0 +1,93 @@
+body{
+background-image:url(../Image/背景1.jpg);
+background-size: cover;　/*設定背景圖片的填滿方式*/
+background-repeat: no-repeat;
+position:fixed;
+font-family: fantasy;
+font-style: italic;
+}
+
+.wrapper{
+	width:1500px;
+	background-color: transparent;
+}
+
+
+li{
+margin:10px;
+list-style: none;
+float: left;
+width: 10%;
+text-align: center;
+background-color: blue;
+color:white;
+border-radius: 30px;
+}
+
+li a{
+	color:white;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+li:hover{
+	background-color:#00A600; 
+}
+
+.map{
+	width:30%;
+	margin-right:5%;
+	float:right;
+	text-align:center; 
+	border:15px outset black;
+	padding: 0px;
+	overflow:hidden;
+	/*overflow:hidden是為了隱藏在圖片放大時超出的部分*/
+	transform:scale(1,1);
+	/*transform可以設定圖片放大的倍率*/
+	transition: all 0.5s ease-out;
+	/*transition可以做出圖片緩慢放大的效果，
+	為圖片放大所需的時間和特效*/
+}
+
+.map:hover{
+	transform:scale(1.2,1.2);
+}
+
+.title{
+	font-style: fantasy;
+	font-size: 80px;
+	text-align: center;
+	position: absolute;
+	top:120px;
+	left:600px;
+}
+
+.bulletin_board{
+	position: 	absolute;	
+	top:120px;
+	left:20px;
+	width: 	35%;
+}
+
+.Dora{
+	height:100px;
+	position: 	absolute;	
+	top:380px;
+	left:480px;
+}
+
+.context{
+	font-family: DFKai-sb;
+	font-size: 25px;
+	position: 	relative;
+	z-index:999;
+	top:150px;
+	left:120px;
+	width:22%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 11;
+	-webkit-box-orient: vertical;
+}
