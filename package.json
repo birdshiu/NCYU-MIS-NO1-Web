@@ -1,0 +1,24 @@
+{
+  "name": "NCYU-MIS-NO1-Web",
+  "version": "1.0.0",
+  "description": "hackmd : https://hackmd.io/_yMF4TvcT7uoM5j8K3nBEA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birdshiu/NCYU-MIS-NO1-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/birdshiu/NCYU-MIS-NO1-Web/issues"
+  },
+  "homepage": "https://github.com/birdshiu/NCYU-MIS-NO1-Web#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  }
+}
