@@ -14,22 +14,14 @@
 	table-layout: fixed;
 }*/
 
-td{
-	vertical-align:center;
-	width:5%;
-	padding:0;
-}
-
-tr{
-	height:10%;
-	padding:0;
-}
-
 .adventure-div{
-	margin-top:15px;
-	margin-left:30px;
-	height:95%;
-	width:95%;
+	/*
+		margin-top跟margin-buttom由 javascrip 來調
+	*/
+	margin-left:auto;
+	margin-right:auto;
+	height:500px;
+	width:1000px;
 	border:1px solid black;
 }
 

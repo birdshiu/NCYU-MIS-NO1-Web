@@ -12,22 +12,27 @@
 				<li>hello</li>
 			</ul>
 		</div>
+		
 		<div class="adventure-div">
-			<table>
-			</table>
 			<img src="./Image/Role/frame-1.png" class="role-image">
 		</div>
 		<div class="adventure-div">
-			<table>
-			</table>
+		</div>
+		<div class="adventure-div">
 		</div>
 	</body>
 	<script src="./js/RoleMove.js"></script>
 	<script>
-		var adventureDivs=document.getElementsByClassName('adventure-div');
+		var adventureDivs=document.getElementsByClassName('adventure-div'); //adventureDive的寛是500高是1000
 		
-		let adventureDiv=document.getElementsByClassName('adventure-div');
-		window.onload=function(){	
+		window.onload=function(){
+			let height=window.screen.availHeight-(window.outerHeight-window.innerHeight); //document的高
+			height=(height-500)/2;
+			for(let div of adventureDivs){ //每個 adventureDiv 要留空白的部分
+				div.style.marginTop=height+'px';
+				div.style.marginBottom=height+'px';
+			}
+		
 			BasicW=document.getElementsByClassName('adventure-div')[0].offsetWidth/XStep;
 			BasicH=document.getElementsByClassName('adventure-div')[0].offsetHeight/YStep;
 			
@@ -35,6 +40,8 @@
 			roleImage.width=BasicW;
 			
 			setRole(19, 0);
+			
+			
 		}
 		
 		adventureDivs[0].addEventListener('click', (event)=>{
@@ -47,5 +54,18 @@
 		roleImage.addEventListener('click', (event)=>{
 			event.stopPropagation(); //按到圖片會怪怪的
 		});
+		
+		function disableScroll() {//讓螢幕不能卷動的function
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+			let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  
+			window.onscroll = function() { 
+				window.scrollTo(scrollLeft, scrollTop); 
+			}; 
+		}
+
+		function enableScroll(){//讓螢幕可以卷動的function
+			window.onscroll=null;
+		}
 	</script>
 </html>
