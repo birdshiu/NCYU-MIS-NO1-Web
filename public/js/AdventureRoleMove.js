@@ -1,5 +1,4 @@
 var BasicW, BasicH;
-var roleImage=document.getElementsByClassName('role-image')[0];
 var roleX, roleY;
 var isMoving=false;
 var isLeft=true;
@@ -12,7 +11,6 @@ const RoleAnimation={//控制 Role 的動畫
 	aniId:1,
 	start:function(){
 		let self=this;
-		console.log('ok');
 		if(self.isGoOn === false){
 			self.isGoOn=true;
 			this.aniId=setInterval(function(){

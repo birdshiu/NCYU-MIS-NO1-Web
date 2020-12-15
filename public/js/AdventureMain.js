@@ -2,6 +2,7 @@
 var adventureDivsInterval=(window.screen.availHeight-(window.outerHeight-window.innerHeight)-500)/2;//每個 div 間的間隔
 var adventureTds=document.getElementsByTagName('td');
 var html=document.getElementsByTagName('html')[0]; //設定 scroll behavior 要用到的
+var roleImage=document.getElementsByClassName('role-image')[0];
 var currentLayer=2;
 
 function disableScroll() {//讓螢幕不能卷動的function
