@@ -1,10 +1,8 @@
 ﻿var adventureDivs=document.getElementsByClassName('adventure-div'); //adventureDive的寛是500高是1000
 var adventureDivsInterval=(window.screen.availHeight-(window.outerHeight-window.innerHeight)-500)/2;//每個 div 間的間隔
+var adventureTds=document.getElementsByTagName('td');
 var html=document.getElementsByTagName('html')[0]; //設定 scroll behavior 要用到的
-
-function noScroll(){
-	window.scrollTo(0, 0);
-}
+var currentLayer=2;
 
 function disableScroll() {//讓螢幕不能卷動的function
 		let scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
@@ -19,13 +17,18 @@ function enableScroll(){//讓螢幕可以卷動的function
 	window.onscroll=null;
 }
 		
-function scrollToLayer(layer){
+function scrollToNextLayer(){
+	if(currentLayer < 0) return;
+	
+	currentLayer-=1;
+	
 	enableScroll();
-
+	
 	html.style.scrollBehavior='smooth';//設成平滑卷動
+	/*scroll-behavior:smooth;讓 html 卷得平滑*/
 	
 	window.scroll({
-		top:adventureDivs[layer].offsetTop - adventureDivsInterval,
+		top:adventureTds[currentLayer].offsetTop,
 		left:0,
 		behavior:'smooth'
 	});
@@ -37,14 +40,14 @@ function scrollToLayer(layer){
 	
 }
 		
-window.onload=function(){
+window.onload=function(){//初始化的部份
 	for(let div of adventureDivs){
 		//每個 adventureDiv 要留空白的部分
 		div.style.marginTop=adventureDivsInterval+'px';
 		div.style.marginBottom=adventureDivsInterval+'px';
 				
 		//每個 adventureDiv 左右 maring 的部分
-		let marginLeftRight=(window.screen.availWidth-1000)/2;
+		let marginLeftRight=(window.screen.availWidth-1000)/2 -10;
 		div.style.marginLeft=marginLeftRight+'px';
 		div.style.marginRight=marginLeftRight+'px';
 	}
@@ -57,12 +60,13 @@ window.onload=function(){
 			
 	setRole(0, 9);
 	
-	window.scroll({
-		top:adventureDivs[2].offsetTop-adventureDivsInterval,
+	window.scroll({//先卷到最下層
+		top:adventureTds[currentLayer].offsetTop,
 		left:0,
 	});
 	
-	
+	disableScroll();
+
 }
 		
 adventureDivs[0].addEventListener('click', (event)=>{

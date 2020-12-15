@@ -1,8 +1,4 @@
-﻿html{
-	/*scroll-behavior:smooth;讓 html 卷得平滑*/
-}
-
-body{
+﻿body{
 	margin:0;
 	padding:0;
 	
@@ -12,20 +8,21 @@ body{
 	position:absolute;
 }
 
-/*table{
-	width:100%;
-	height:100%;
-	border:1px solid red;
-	table-layout: fixed;
-}*/
+table{
+	width:99%;
+}
+table, tr, td{
+	margin:0px;
+	padding:0px;
+}
+
 
 .adventure-div{
-	/*
-		margin 由 javascrip 來調
-	*/
+	/*margin 由 javascrip 來調*/
 	height:500px;
 	width:1000px;
 	border:1px solid black;
+	background-color:white;
 }
 
 .navigator-div{
@@ -51,4 +48,22 @@ body{
 	height:110px;
 	margin:0;
 	z-index:-1;
+}
+
+.layer-zero-td-background-class{
+	background-image:url(../Image/AboutFanluBackground.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.layer-one-td-background-class{
+	background-image:url(../Image/AdventureBackground1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.layer-two-td-background-class{
+	background-image:url(../Image/AdventureBackground2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }

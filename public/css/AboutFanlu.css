@@ -1,10 +1,10 @@
 body{
-background-image:url(../Image/AboutFanluBackground.jpg);
-background-size: cover;　/*設定背景圖片的填滿方式*/
-background-repeat: no-repeat;
-position:fixed;
-font-family: fantasy;
-font-style: italic;
+	background-image:url(../Image/AboutFanluBackground.jpg);
+	background-size: cover;　/*設定背景圖片的填滿方式*/
+	background-repeat: no-repeat;
+	position:fixed;
+	font-family: fantasy;
+	font-style: italic;
 }
 
 .wrapper{
