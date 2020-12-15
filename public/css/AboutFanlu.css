@@ -1,5 +1,5 @@
 body{
-background-image:url(../Image/背景1.jpg);
+background-image:url(../Image/AboutFanluBackground.jpg);
 background-size: cover;　/*設定背景圖片的填滿方式*/
 background-repeat: no-repeat;
 position:fixed;
@@ -14,14 +14,14 @@ font-style: italic;
 
 
 li{
-margin:10px;
-list-style: none;
-float: left;
-width: 10%;
-text-align: center;
-background-color: blue;
-color:white;
-border-radius: 30px;
+	margin:10px;
+	list-style: none;
+	float: left;
+	width: 10%;
+	text-align: center;
+	background-color: blue;
+	color:white;
+	border-radius: 30px;
 }
 
 li a{

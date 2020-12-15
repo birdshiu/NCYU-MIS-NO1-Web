@@ -1,6 +1,11 @@
-﻿body{
+﻿html{
+	/*scroll-behavior:smooth;讓 html 卷得平滑*/
+}
+
+body{
 	margin:0;
 	padding:0;
+	
 }
 
 .role-image{
@@ -16,10 +21,8 @@
 
 .adventure-div{
 	/*
-		margin-top跟margin-buttom由 javascrip 來調
+		margin 由 javascrip 來調
 	*/
-	margin-left:auto;
-	margin-right:auto;
 	height:500px;
 	width:1000px;
 	border:1px solid black;
