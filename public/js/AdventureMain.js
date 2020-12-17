@@ -58,6 +58,16 @@ function scrollToNextLayer(){
 }
 		
 window.onload=function(){//初始化的部份
+
+	for(let i=0;i<3;i++){ //Map初始化
+		roadMap[i]=new Array();
+		for(let j=0;j<10;j++){
+			roadMap[i][j]=new Array();
+			for(let k=0;k<20;k++){
+				roadMap[i][j][k]=0;
+			}
+		}
+	}
 	for(let div of adventureDivs){
 		//每個 adventureDiv 要留空白的部分
 		div.style.marginTop=adventureDivsInterval+'px';
