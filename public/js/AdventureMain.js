@@ -2,8 +2,15 @@
 var adventureDivsInterval=(window.screen.availHeight-(window.outerHeight-window.innerHeight)-500)/2;//每個 div 間的間隔
 var adventureTds=document.getElementsByTagName('td');
 var html=document.getElementsByTagName('html')[0]; //設定 scroll behavior 要用到的
-var roleImage=document.getElementsByClassName('role-image')[0];
+var roleImage=document.createElement('img');
 var currentLayer=2;
+
+var BasicW, BasicH;
+var roleX, roleY;
+var isMoving=false;
+var isLeft=true;
+const XStep=20;
+const YStep=10;
 
 function disableScroll() {//讓螢幕不能卷動的function
 		let scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
@@ -16,6 +23,13 @@ function disableScroll() {//讓螢幕不能卷動的function
 
 function enableScroll(){//讓螢幕可以卷動的function
 	window.onscroll=null;
+}
+
+function adventureDivEvent(event){
+	let targetX=Math.floor(event.offsetX/BasicW);
+	let targetY=Math.floor(event.offsetY/BasicH);
+			
+	basicGoTo(targetX, targetY);
 }
 		
 function scrollToNextLayer(){
@@ -39,6 +53,8 @@ function scrollToNextLayer(){
 		disableScroll();
 	}, 800);
 	
+	adventureDivs[currentLayer].appendChild(roleImage);
+	setRole(0, 9);
 }
 		
 window.onload=function(){//初始化的部份
@@ -56,27 +72,25 @@ window.onload=function(){//初始化的部份
 	BasicW=document.getElementsByClassName('adventure-div')[0].offsetWidth/XStep;
 	BasicH=document.getElementsByClassName('adventure-div')[0].offsetHeight/YStep;
 			
+	roleImage.src='./Image/Role/frame-1.png';
 	roleImage.height=BasicH;
 	roleImage.width=BasicW;
-			
-	setRole(0, 9);
+	roleImage.style.position='relative';
+	roleImage.addEventListener('click', (event)=>{
+		event.stopPropagation(); //按到圖片會怪怪的
+	});
 	
 	window.scroll({//先卷到最下層
 		top:adventureTds[currentLayer].offsetTop,
 		left:0,
 	});
 	
-	disableScroll();
-
+	disableScroll();//固定視窗
+	
+	adventureDivs[currentLayer].appendChild(roleImage);
+	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
+	setRole(0, 9);
 }
-		
-adventureDivs[0].addEventListener('click', (event)=>{
-	let targetX=Math.floor(event.offsetX/BasicW);
-	let targetY=Math.floor(event.offsetY/BasicH);
-			
-	basicGoTo(targetX, targetY);
-});
-		
-roleImage.addEventListener('click', (event)=>{
-	event.stopPropagation(); //按到圖片會怪怪的
-});
+
+
+

@@ -1,10 +1,3 @@
-var BasicW, BasicH;
-var roleX, roleY;
-var isMoving=false;
-var isLeft=true;
-const XStep=20;
-const YStep=10;
-
 const RoleAnimation={//控制 Role 的動畫
 	isGoOn:false,
 	ImageId:1,
@@ -30,9 +23,9 @@ const RoleAnimation={//控制 Role 的動畫
 		
 function setRole(x, y){
 	roleX=x; roleY=y;
-	let div=document.getElementsByClassName('adventure-div')[0];
-	roleImage.style.top=(div.offsetTop+BasicH*y)+"px";
-	roleImage.style.left=(div.offsetLeft+BasicW*x)+"px";
+	//let div=document.getElementsByClassName('adventure-div')[0];
+	roleImage.style.top=(BasicH*y)+"px";
+	roleImage.style.left=(BasicW*x)+"px";
 }
 
 function walk(x, y){
