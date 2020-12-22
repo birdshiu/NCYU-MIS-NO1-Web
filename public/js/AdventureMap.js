@@ -1,4 +1,6 @@
 ﻿var roadMap=new Array(); //Map 是個三維陣列，在Main裡初始化
+var roleMap=new Array(); //這個 Map 是個二維陣列，找路徑時用到
+
 
 var Items={
 	'rock1':{id: 1, img:'./Image/Map/rock1.png', funct:normalItemEvent},

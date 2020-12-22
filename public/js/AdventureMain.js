@@ -6,9 +6,6 @@ var roleImage=document.createElement('img');
 var currentLayer=2;
 
 var BasicW, BasicH;
-var roleX, roleY;
-var isMoving=false;
-var isLeft=true;
 const XStep=20;
 const YStep=10;
 
@@ -62,9 +59,11 @@ window.onload=function(){//初始化的部份
 	for(let i=0;i<3;i++){ //Map初始化
 		roadMap[i]=new Array();
 		for(let j=0;j<10;j++){
+			roleMap[j]=new Array();//這個順便一起
 			roadMap[i][j]=new Array();
 			for(let k=0;k<20;k++){
 				roadMap[i][j][k]=0;
+				roleMap[j][k]=0;
 			}
 		}
 	}
