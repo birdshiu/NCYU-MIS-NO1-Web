@@ -13,7 +13,8 @@ body {
 .nav-area {
 	float: right;
 	list-style: none;
-	margin-top: 50px;
+	margin-top: 40px;
+	margin-right: -20px;
 }
 .nav-area li {
 	display: inline-block;
@@ -23,13 +24,13 @@ body {
 	text-decoration: none;
 	padding: 30px 40px;
 	font-family: fantasy;
-	font-size: 18px;
+	font-size: 25px;
 	text-transform: uppercase;
 }
-.nav-area li a:hover {
-	background: #fff;
-	color: #333;
-}
+    .nav-area li a:hover {
+        background: #fff;
+        color: #333;
+    }
 .logo {
 	float: left;
 }
@@ -41,14 +42,14 @@ body {
 	position: absolute;
 	width: 600px;
 	height: 100px;
-	margin: 10% 30%;
+	margin: 15% 35%;
 	text-align: center;
 }
 .welcome-text h1 {
 	text-align: center;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 50px;
+	font-size: 60px;
 }
 .welcome-text h1 span {
 	color: 	#FF8000;
@@ -70,27 +71,28 @@ body {
 }
 
 .welcome-text img{
-	height:300px;
+	height:500px;
 }
 /*resposive*/
 
-@media (max-width:600px) {
+@media (max-width:800px) {
 	.wrapper {
-		width: 100%;
+		width: 200%;
 	}
 	.logo {
 		float: none;
-		width: 50%;
+		width: 100%;
 		text-align: center;
 		margin: auto;
 	}
 	.nav-area {
 		float: none;
 		margin-top: 0;
+		margin-right: 350px;
 	}
 	.nav-area li a {
 		padding: 5px;
-		font-size: 11px;
+		font-size: 25px;
 	}
 	.nav-area {
 		text-align: center;
@@ -102,5 +104,13 @@ body {
 	}
 	.welcome-text h1 {
 		font-size: 30px;
+	}
+	.welcome-text img {
+			height: 200px;
+	}
+	body {
+		font-family: 'Poppins', sans-serif;
+		background-image: url(../Image/IndexBackground_small.png);
+		background-size: 30%;
 	}
 }

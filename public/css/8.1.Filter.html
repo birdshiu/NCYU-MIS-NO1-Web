@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img,fieldset {
+	width:526px;
+	margin: 15px;
+}
+
+img{
+	height:395px;
+}
+
+input {
+	width:75%;
+}
+.blur {
+    -webkit-filter: blur(2px);
+    filter: blur(0px);
+}
+
+
+</style>
+
+<script>
+function change(obj, prefix, unit)
+{
+	var value = obj.value;
+    var s = prefix;
+    var n = prefix + "_no";
+    var val = prefix + "(" + value + unit + ")";
+
+    document.getElementById(s).style.filter = val;
+    document.getElementById(s).style.WebkitFilter = val;
+    document.getElementById(n).innerHTML = val;
+}
+function changeBlur(obj)
+{
+	var value = obj.value;
+	var s="blur";
+	var n="blur_no";
+	var val = "blur("+value+"px)";
+
+	document.getElementById(s).style.filter=val;
+	document.getElementById(s).style.WebkitFilter=val;
+	document.getElementById(n).innerHTML=val;
+}
+
+</script>
+</head>
+<body>
+
+<div>
+  <img src="sandy.jpg" class="blur" id="blur">
+  <fieldset>
+    <legend>模糊效果</legend>
+    <input value="0" type="range" min="0" max="5" step="1" onchange="change(this, 'blur', 'px')">
+    <label id="blur_no">blur(0px)</label>
+  </fieldset>
+</div>
+
+
+</body>
+</html>

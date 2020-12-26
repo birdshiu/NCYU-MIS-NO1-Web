@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.D1 {
+    position: fixed; /*直接定位在(100,100)*/
+    left: 100px;
+    top: 100px;
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition-property: width height; 
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.42,-1.5,0.58,1);
+}
+
+.D2 {
+    position: absolute; /*container因為static，使得top，left無作用，因此容器左上角位置仍為(0,0)，所以D2被定位在容易(300, 300)*/
+    top: 300px;  
+    left: 300px;
+    width: 100px;
+    height: 100px;
+    background: orange;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition: all 2s cubic-bezier(0.42,-1.5,0.58,1); /*簡略寫法作用到所有屬性*/
+}
+
+.D3 {
+    position: relative; /*因D2位置absolute不佔空間，因此D3實際位置在容器左上角(0,0)-(100,100)，現在被移動到相對位置(0+500,0+500)*/
+    top: 500px;  
+    left: 500px;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition: all 2s linear; /*線性時間曲線，同cubic-bezier(0,0,1,1);*/
+}
+
+.D4 {
+    position: relative; /*D3位置relative佔空間(0,0)-(100,100)，D4接續D3內定左上角位置在(0,100)，現在被移動到相對位置(0+700,100+600)*/
+    left: 700px;
+    top: 600px;
+    width: 100px;
+    height: 100px;
+    background: green;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition-property: height; 
+    transition-duration: 10s;
+    transition-timing-function: steps(100,start); /*100步完成效果，從計時起始開始動作*/
+}
+
+.D5 {
+    position: relative; /*D4位置relative佔空間(0,100)-(100,200)，D5接續D4內定左上角位置在(0,200)，現在被移動到相對位置(0+900,200+300)*/
+    left: 900px;
+    top: 300px;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition-property: width height; 
+    transition-duration: 10s;
+    transition-timing-function: steps(10,end); /*10步完成效果，從第一次計時結束開始動作，此例子為1s後*/
+}
+
+.D6 {
+    position: relative; /*D5位置relative佔空間(0,200)-(100,300)，D6接續D5內定左上角位置在(0,300)，現在被移動到相對位置(0+1100,300+0)*/
+    left: 1100px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background: indigo;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition-property: width height; 
+    transition-duration: 10s;
+     transition: all 2s 1s cubic-bezier(0.42,-1.5,0.58,1); /*停頓1s後開始動作*/
+}
+
+.D7 {
+    position: relative; /*D6位置relative佔空間(0,300)-(100,400)，D6接續D5內定左上角位置在(0,400)，現在被移動到相對位置(0+1300,400+(-300)*/
+    left: 1300px;
+    top: -300px;
+    width: 100px;
+    height: 100px;
+    background: purple;
+    -webkit-transition-property: width height;
+    -webkit-transition-duration: 2s;
+    transition: width 1s cubic-bezier(0,1,1,-2), height 3s cubic-bezier(0,1,1,-2); /*1s完成效果*/
+}
+
+div:hover {
+    width: 300px;  /*當元素大小改變時，relative佔的空間也會改變，因此會連帶使後方元素定位改變，造成連動效果*/
+    height: 300px;
+}
+
+.Container {
+    position: static;/*position:static left, top 屬性無效，改成absolute會產生不同效果*/
+    left: 100px; 
+    top: 100px;
+}
+
+</style>
+</head>
+<body>
+<div class="Container">
+  <div class="D1"></div>
+  <div class="D2"></div>
+  <div class="D3"></div>
+  <div class="D4"></div>
+  <div class="D5"></div>
+  <div class="D6"></div>
+  <div class="D7"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100px;
+}
+
+a {
+  height: 100px;
+  display: block; /*將超連結以block方式顯示，沒此設定則圖片顯示範圍會依據超連結文字範圍*/
+}
+
+.ncyu {
+    left: 0px;
+    background: url('Greenman/1-3vague.gif') 0 0;
+}
+
+.gramgt {
+    left: 150px;
+    background: url('Greenman/1-3vague.gif') -100px 0;
+}
+
+.mis {
+    left: 300px;
+    background: url('Greenman/1-3vague.gif') -200px 0;
+}
+
+.ncyu a:hover {
+    background: url('Greenman/1-3vague.gif') 0 -100px;
+}
+
+.gramgt a:hover {
+    background: url('Greenman/1-3vague.gif') -100px -100px;
+}
+
+.mis a:hover {
+    background: url('Greenman/1-3vague.gif') -200px -100px;
+}
+</style>
+</head>
+<body>
+
+  <div class="ncyu"><a href="http://www.ncyu.edu.tw"></a></div>
+  <div class="gramgt"><a href="http://www.ncyu.edu.tw/gramgt"></a></div>
+  <div class="mis"><a href="http://www.ncyu.edu.tw/mis"></a></div>
+
+</body>
+</html>
