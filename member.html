@@ -1,57 +1,64 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="Content-Script-Type" content="text/javascript">
-		<meta http-equiv="Content-Style-Type" content="text/css">
-
-		<style type="text/css">
-			@import url("./css/Member.css");
-		</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>W3.CSS Template</title>
 		
-		<script type="text/javascript" src="./js/jquery.min.js"></script>
-		<script type="text/javascript">
-			function changeText(value){
-				var div = document.getElementById("divv"); 
-				var text = ""; 
-				var image = ""; 
-				
-				if (value == 1) text += "<h2>林忠廷 嘉義大學資管系大三<br><p>生日:2000-01-07<br><p>興趣:籃球、手遊、寫小說<br><p>專長:VB、資料庫</h2>"; 
-				if (value == 2) text += "<h2>洪晨瑋 嘉義大學資管系大三<br><p>生日:1999-11-09<br><p>興趣:籃球、手遊、談戀愛<br><p>專長:網頁前端、資料庫</h2> "; 
-				if (value == 3) text += "<h2>李權恒 嘉義大學資管系大三<br><p>生日:2000-07-25<br><p>興趣:籃球、灌籃、拉桿<br><p>專長:網頁前後端、資料庫</h2> ";
-				if (value == 4) text += "<h2>陳贊旭 嘉義大學資管系大三<br><p>生日:2000-02-18<br><p>興趣:寫程式、玩PS4、太鼓達人<br><p>專長:網頁前後端、資料庫、python</h2> </h2> ";
-				if (value == 5) text += "<h2>游凱傑 嘉義大學資管系大三<br><p>生日:2000-08-22<br><p>興趣:籃球、夾娃娃、博弈<br><p>專長:網頁前端、VB</h2>  ";	
-				
-				div.innerHTML = text; 
-			}
-		</script>
-
+		<link rel="stylesheet" href="./css/w3.css">
+		<link rel="stylesheet" href="./css/w3-theme-black.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
 	</head>
 	
-	<body>
-		<div class="header">
-			<nav>
-				<ul class="menu">
-					<li><a href="./Index.html">首頁</a></li>
-					<li><a href="./AboutFanlu.html">番路簡介</a></li>
-					<li><a href="./Adventure.html">番路GOGO!</a></li>
-					<li><a href="./Gallery.html">旅途紀錄</a></li>
-				</ul>
-			</nav>
+	<body id="myPage">
+		<div class="w3-top">
+			<div class="w3-bar w3-theme-d2 w3-left-align">
+				<a href="./Index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">主頁面</a>
+				<a href="./aboutFanlu.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">番路簡介</a>
+				<a href="./Adventure.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">番路GOGO!</a>
+				<a href="./Gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">旅途記錄</a>
+			</div>
 		</div>
-		
-		<div class="sidebar_left"><img width="300px" height="500px" src="./Image/waterfall-1.gif"></img></div>
-		<div class="sidebar_right"><img width="300px" height="500px"   src="./Image/waterfall.gif"></img></div>
-		
-		<div class="content">
-			<a href="javascript: changeText(1);"><img   src="./Image/881975.jpg" title="請點我" class="square" ></img></a>
-			<a href="javascript: changeText(2);"><img  src="./Image/881976.jpg" title="請點我" class="square" ></img></a>
-			<a href="javascript: changeText(3);"><img  src="./Image/881977.jpg" title="請點我" class="square" ></img></a>
-			<a href="javascript: changeText(4);"><img   src="./Image/881978.jpg" title="請點我" class="square" ></img></a>
-			<a href="javascript: changeText(5);"><img   src="./Image/890822.jpg" title="請點我" class="square" ></img></a>
+
+<!-- Image Header -->
+		<div class="w3-display-container w3-animate-opacity">
+			<img src="./Image/911267.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
 		</div>
-		
-		<div align="center" id="divv" ><img   width="500px" height="260px" src="./Image/911267.jpg"></img></div>
-		<div class="footer"><img width="100%" height="100px" src="./Image/123.jpg"></img></div>
-<!--</div>!-->
+
+<!-- Team Container -->
+		<div class="w3-container w3-padding-64 w3-center" id="team">
+			<h2>組內成員</h2>
+			
+			<div class="w3-row"><br>
+					<img src="./Image/881976.jpg" alt="Boss" style="width:15%" class="w3-circle w3-hover-opacity">
+					<h3>洪晨瑋</h3>
+					<p>組長</p>
+			</div>
+			
+			<div class="w3-row"><br>
+				<div class="w3-quarter">
+					<img src="./Image/890822.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+					<h3>游屁眼</h3>
+					<p>報告</p>
+				</div>
+
+				<div class="w3-quarter">
+					<img src="./Image/881978.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+					<h3>陳贊旭</h3>
+					<p>程式</p>
+				</div>
+
+				<div class="w3-quarter">
+					<img src="./Image/881977.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+					<h3>李權恒</h3>
+					<p>美編</p>
+				</div>
+
+				<div class="w3-quarter">
+					<img src="./Image/881975.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+					<h3>林忠廷</h3>
+					<p>文書</p>
+				</div>
+			</div>
+		</div>
+	
 	</body>
 </html>
