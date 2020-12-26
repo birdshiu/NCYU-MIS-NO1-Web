@@ -1,4 +1,4 @@
-body{
+﻿body{
 	background-image:url(../Image/AboutFanluBackground.jpg);
 	background-size: cover;　/*設定背景圖片的填滿方式*/
 	background-repeat: no-repeat;
@@ -86,7 +86,7 @@ li:hover{
 	left:120px;
 	width:22%;
 	overflow: hidden;
-	text-overflow: ellipsis;
+	
 	display: -webkit-box;
 	-webkit-line-clamp: 11;
 	-webkit-box-orient: vertical;

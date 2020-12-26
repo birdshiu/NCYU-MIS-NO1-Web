@@ -19,6 +19,10 @@ app.get('/', (req, res)=>{
 	res.sendFile(__dirname+'/Index.html');
 });
 
+app.get('/Index.html', (req, res)=>{
+	res.sendFile(__dirname+'/Index.html');
+});
+
 app.get('/Gallery.html', (req, res)=>{
 	res.sendFile(__dirname+'/Gallery.html');
 });
