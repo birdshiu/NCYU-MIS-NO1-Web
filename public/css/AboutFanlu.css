@@ -12,6 +12,59 @@
 	background-color: transparent;
 }
 
+.popWindow{
+	width:666px;
+	height:488px;
+	box-shadow:5px 5px 10px black;
+	border:2px gray solid;
+	border-radius:20px;
+	position:fixed;
+	background-color:#FFFFFF;
+	display:none;
+}
+
+.popWindowDetail{
+	width:620px;
+	height:400px;
+	border:2px gray solid;
+	border-radius:10px;
+	position:relative;
+	top:20px;
+	left:20px;
+	word-wrap: break-word;
+	overflow-y:scroll;
+}
+
+.popWindowDetail::-webkit-scrollbar {
+    width: 12px;
+	height:20px;
+}
+
+.popWindowDetail::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+    border-radius: 10px;
+}
+
+.popWindowDetail > p{
+	font-size:24px;
+	margin:0;
+}
+
+.popWindowH1{
+	position:relative;
+	top:10px;
+	left:250px;
+	display:inline;
+}
+
+.popWindowImg{
+	height:40px;
+	width:40px;
+	display:inline;
+	position:relative;
+	top:15px;
+	left:470px;
+}
 
 li{
 	margin:10px;
@@ -84,7 +137,7 @@ li:hover{
 	font-family: DFKai-sb;
 	font-size: 25px;
 	position: 	absolute;
-	z-index:999;
+	/*z-index:999;*/
 	top:200px;
 	left:120px;
 	width:22%;
@@ -92,6 +145,7 @@ li:hover{
 	display: -webkit-box;
 	-webkit-line-clamp: 11;
 	-webkit-box-orient: vertical;
+	cursor:help;
 }
 
 @media (min-width:1500px) {
@@ -189,7 +243,7 @@ li:hover{
 		font-family: DFKai-sb;
 		font-size: 25px;
 		position: absolute;
-		z-index: 999;
+		/*z-index: 999;*/
 		top: 250px;
 		left: 150px;
 		width: 28%;
