@@ -33,14 +33,12 @@ function setItem(layer, x, y, w, h, item){
 	tmpImg.style.top=(adventureTds[layer].offsetTop+adventureDivs[layer].offsetTop+BasicH*y)+'px';
 	tmpImg.style.left=(adventureTds[layer].offsetLeft+adventureDivs[layer].offsetLeft+BasicW*x)+'px';
 	
-	for(let i=x; i < x+w; i++){
-		for(let j=y; j < y+h; j++){
+	for(let i=y; i < y+h; i++){
+		for(let j=x; j < x+w; j++){
 			roadMap[layer][i][j]=item.id;
 		}
 	}
 	
 	adventureDivs[layer].appendChild(tmpImg);
 	tmpImg.addEventListener('click', item.funct);
-	
-	printMap(2); //test
 }

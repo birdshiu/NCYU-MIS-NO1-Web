@@ -69,7 +69,10 @@ function findPath(){
 			rolePathIndex--;
 		}
 	
-		if(rolePath[rolePathIndex].x === targetX && rolePath[rolePathIndex].y === targetY){
+		if(rolePathIndex < 0){
+			return;
+		}
+		else if(rolePath[rolePathIndex].x === targetX && rolePath[rolePathIndex].y === targetY){
 			return;
 		}
 	}
@@ -84,54 +87,45 @@ function setRole(x, y){
 }
 
 function walk(index){
-	if(roleX === x && roleY === y){
-		RoleAnimation.stop();
+	console.log(rolePath[index+1]);
+	if(rolePath[index+1] === undefined){
 		isMoving=false;
+		RoleAnimation.stop();
 		return;
 	}
-	if(x > roleX){
-		setTimeout(()=>{
-			setRole(roleX+1, roleY);
-			walk(x, y);
-		}, 150);
+	
+	let nowX=rolePath[index].x;
+	let nowY=rolePath[index].y;
+	let nextX=rolePath[index+1].x;
+	let nextY=rolePath[index+1].y;
+	
+	if(nextX < nowX){
+		roleImage.style.transform="scaleX(-1)";
 	}
-	else if(x < roleX){
-		setTimeout(()=>{
-			setRole(roleX-1, roleY);
-			walk(x, y);
-		}, 150);
+	else if(nextX < nowX){
+		roleImage.style.transform="";
 	}
-	else if(y > roleY){
-		setTimeout(()=>{
-			setRole(roleX, roleY+1);
-			walk(x, y);
-		}, 150);
-	}
-	else if(y < roleY){
-		setTimeout(()=>{
-			setRole(roleX, roleY-1);
-			walk(x, y);
-		}, 150);
-	}
+	
+	setTimeout(()=>{
+		setRole(nextX, nextY);
+		walk(index+1);
+	}, 150);
 }
 
-function basicGoTo(x, y){ //先走X再走Y好了
+function basicGoTo(x, y){
 	if(isMoving === true) return;
-	//isMoving=true;
-	//RoleAnimation.start();
 	
 	targetX=x;
 	targetY=y;
 	
 	findPath();
-	return;
-	if(x >= roleX){
-		isLeft=true;
-		roleImage.style.transform="";
+	
+	if(rolePathIndex < 0){
+		return;
 	}
 	else{
-		isLeft=false;
-		roleImage.style.transform="scaleX(-1)";
+		isMoving=true;
+		RoleAnimation.start();
 	}
-	walk(index);
+	walk(0);
 }
