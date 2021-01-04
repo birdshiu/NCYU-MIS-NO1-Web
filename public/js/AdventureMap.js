@@ -16,7 +16,15 @@ var Items={
 	'coat':{id: 9, img:'./Image/Map/coat.png', funct:coatItemEvent},
 	'pavilion':{id: 10, img:'./Image/Map/pavilion.png', funct:pavilionItemEvent},
 	'waterfall':{id: 11, img:'./Image/Map/waterfall.png', funct:waterfallItemEvent},
-	'house':{id: 12, img:'./Image/Map/house.png', funct:houseItemEvent}
+	'house':{id: 12, img:'./Image/Map/house.png', funct:houseItemEvent},
+	'sign1':{id: 13, img:'./Image/Map/sign.png', funct:sign1ItemEvent},
+	'sign2':{id: 14, img:'./Image/Map/sign.png', funct:sign2ItemEvent},
+	'sign3':{id: 15, img:'./Image/Map/sign.png', funct:sign3ItemEvent},
+	'sign4':{id: 16, img:'./Image/Map/sign.png', funct:sign4ItemEvent},
+	'sign5':{id: 17, img:'./Image/Map/sign.png', funct:sign5ItemEvent},
+	'rock5':{id: 18, img:'./Image/Map/rock5.png', funct:rock5ItemEvent},
+	'bamboo1':{id: 19, img:'./Image/Map/bamboo1.png', funct:normalItemEvent},
+	'bamboo2':{id: 20, img:'./Image/Map/bamboo2.png', funct:normalItemEvent}
 };
 /*
 *************
@@ -95,7 +103,7 @@ function pavilionItemEvent(){
 function waterfallItemEvent(){
 	event.stopPropagation();
 	clickedItemId=11;
-	alert('我們走得半死後，終於到達那該死的瀑布');
+	alert('之後就在鳳凰瀑布探索啦~~~');
 	scrollToNextLayer();
 }
 
@@ -105,6 +113,54 @@ function houseItemEvent(){
 	if(isRoleAround()){
 		alert('Google 的導航好像有點問題，我們卡在一個地方，不確定要往哪走，還有去問住附近的人。來回亂晃');
 		window.open('https://drive.google.com/file/d/1biDZ7dGfQMXOAZei_m0ADyNY-feWf0Ss/view?usp=sharing', '找路', 100, 100);
+	}
+}
+
+function sign1ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=13;
+	if(isRoleAround()){
+		alert('還不知要打什麼');
+	}
+}
+
+function sign2ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=14;
+	if(isRoleAround()){
+		alert('離開鄉公所後，我們就直接往鳳凰瀑布跑去了');
+	}
+}
+
+function sign3ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=15;
+	if(isRoleAround()){
+		alert('經過半天岩觀景台後，再騎一段路，我們就快到鳳凰瀑布了');
+	}
+}
+
+function sign4ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=16;
+	if(isRoleAround()){
+		alert('到鳳凰瀑布前，有好長一段步道要走，要有心裡準備。(PS:我們網頁遊戲上的步道完全無法展現出那步道的險惡)');
+	}
+}
+
+function sign5ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=17;
+	if(isRoleAround()){
+		alert('恭喜你用滑鼠走到了鳳凰瀑布');
+	}
+}
+
+function rock5ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=18;
+	if(isRoleAround()){
+		alert('ㄟ...抱歉，這個看起來不太一樣的石頭不是彩蛋，我只是想在這邊擺著它而已');
 	}
 }
 

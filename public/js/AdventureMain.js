@@ -54,7 +54,68 @@ function scrollToNextLayer(){
 	setRole(0, 9);
 	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
 }
-		
+
+function setLayer1(){//第一層的佈景
+	//rock2
+	for(let i=0;i<3;i++) setItem(2, i, 7, 1, 1, Items['rock2']);
+	for(let i=2;i<8;i++) setItem(2, i, 8, 1, 1, Items['rock2']);
+	setItem(2, 5, 7, 1, 1, Items['rock2']);
+	setItem(2, 8, 7, 1, 1, Items['rock2']);
+	setItem(2, 9, 7, 1, 1, Items['rock2']);
+	setItem(2, 10, 8, 1, 1, Items['rock2']);
+	setItem(2, 11, 8, 1, 1, Items['rock2']);
+	setItem(2, 14, 8, 1, 1, Items['rock2']);
+	
+	for(let i=9;i<16;i++) setItem(2, i, 4, 1, 1, Items['rock2']);
+	for(let i=15;i<20;i++) setItem(2, i, 3, 1, 1, Items['rock2']);
+	
+	for(let i=4;i<7;i++) setItem(2, i, 5, 1, 1, Items['rock2']);
+	setItem(2, 5, 4, 1, 1, Items['rock2']);
+	setItem(2, 6, 4, 1, 1, Items['rock2']);
+	
+	//rock1
+	for(let i=3;i<9;i++) setItem(2, i, 0, 1, 1, Items['rock1']);
+	for(let i=9;i<15;i++) setItem(2, i, 3, 1, 1, Items['rock1']);
+	for(let i=14;i<20;i++) setItem(2, i, 2, 1, 1, Items['rock1']);
+	
+	setItem(2, 0, 5, 1, 2, Items['rock5']);
+	//brick
+	for(let i=16;i<20;i++) setItem(2, i, 7, 1, 1, Items['brick']);
+	setItem(2, 16, 8, 1, 1, Items['brick']);
+	
+	//platform
+	setItem(2, 0, 0, 2, 2, Items['platform2']);
+	setItem(2, 3, 3, 2, 2, Items['platform2']);
+	setItem(2, 7, 4, 2, 2, Items['platform2']);
+	setItem(2, 10, 6, 2, 2, Items['platform1']);
+	setItem(2, 12, 7, 2, 2, Items['platform1']);
+	
+	//bamboo
+	setItem(2, 9, 0, 2, 1, Items['bamboo2']);
+	setItem(2, 11, 0, 2, 2, Items['bamboo1']);
+	setItem(2, 13, 0, 2, 1, Items['bamboo2']);
+	
+	
+	//建築
+	setItem(2, 0, 8, 2, 2, Items['ncyu']);
+	setItem(2, 17, 8, 3, 2, Items['township']);
+	setItem(2, 0, 2, 2, 2, Items['pavilion']);
+	for(let i=5;i<9;i++) setItem(2, i, 3, 1, 1, Items['house']);
+	
+	//其它
+	setItem(2, 18, 5, 1, 1, Items['coat']);
+	setItem(2, 3, 5, 1, 1, Items['chicken']);
+	
+	//告示牌
+	setItem(2, 9, 8, 1, 1, Items['sign1']);
+	setItem(2, 16, 6, 1, 1, Items['sign2']);
+	setItem(2, 2, 0, 1, 1, Items['sign3']);
+	setItem(2, 10, 1, 1, 1, Items['sign4']);
+	setItem(2, 17, 1, 1, 1, Items['sign5']);
+	
+	setItem(2, 18, 0, 2, 2, Items['waterfall']);
+}
+
 window.onload=function(){//初始化的部份
 
 	for(let i=0;i<3;i++){ //Map初始化
@@ -97,9 +158,9 @@ window.onload=function(){//初始化的部份
 	
 	adventureDivs[currentLayer].appendChild(roleImage);
 	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
-	setRole(0, 9);
+	setRole(2, 9);
 
-	setItem(2, 0, 8, 1, 1, Items['house']);
+	setLayer1();
 }
 
 
