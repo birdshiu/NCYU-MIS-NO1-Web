@@ -98,10 +98,8 @@ window.onload=function(){//初始化的部份
 	adventureDivs[currentLayer].appendChild(roleImage);
 	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
 	setRole(0, 9);
-	
-	for(let i =0;i<15;i++) setItem(2, i, 8, 1, 1, Items['rock1']);
 
-	setItem(2, 15, 8, 1, 1, Items['chicken']);
+	setItem(2, 0, 8, 1, 1, Items['house']);
 }
 
 
