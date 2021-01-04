@@ -87,7 +87,6 @@ function setRole(x, y){
 }
 
 function walk(index){
-	console.log(rolePath[index+1]);
 	if(rolePath[index+1] === undefined){
 		isMoving=false;
 		RoleAnimation.stop();
@@ -102,7 +101,7 @@ function walk(index){
 	if(nextX < nowX){
 		roleImage.style.transform="scaleX(-1)";
 	}
-	else if(nextX < nowX){
+	else if(nextX > nowX){
 		roleImage.style.transform="";
 	}
 	

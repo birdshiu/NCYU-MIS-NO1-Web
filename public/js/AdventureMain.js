@@ -52,6 +52,7 @@ function scrollToNextLayer(){
 	
 	adventureDivs[currentLayer].appendChild(roleImage);
 	setRole(0, 9);
+	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
 }
 		
 window.onload=function(){//初始化的部份
@@ -71,11 +72,9 @@ window.onload=function(){//初始化的部份
 		//每個 adventureDiv 要留空白的部分
 		div.style.marginTop=adventureDivsInterval+'px';
 		div.style.marginBottom=adventureDivsInterval+'px';
-				
-		//每個 adventureDiv 左右 maring 的部分
-		let marginLeftRight=(window.screen.availWidth-1000)/2 -10;
+		let marginLeftRight=(window.screen.availWidth-900)/2
 		div.style.marginLeft=marginLeftRight+'px';
-		div.style.marginRight=marginLeftRight+'px';
+		div.style.marginRight='auto';//marginLeftRight+'px';
 	}
 		
 	BasicW=document.getElementsByClassName('adventure-div')[0].offsetWidth/XStep;
@@ -99,6 +98,10 @@ window.onload=function(){//初始化的部份
 	adventureDivs[currentLayer].appendChild(roleImage);
 	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
 	setRole(0, 9);
+	
+	for(let i =0;i<15;i++) setItem(2, i, 8, 1, 1, Items['rock1']);
+
+	setItem(2, 15, 8, 1, 1, Items['chicken']);
 }
 
 
