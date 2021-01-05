@@ -22,7 +22,6 @@ table, tr, td{
 	height:500px;
 	width:1000px;
 	border:1px solid black;
-	background-color:white;
 }
 
 .navigator-div{
@@ -55,9 +54,20 @@ table, tr, td{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.layer-zero-td-background-class > div{
+	background-image:url(../Image/Map/mudBG.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 .layer-one-td-background-class{
 	background-image:url(../Image/AdventureBackground1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.layer-one-td-background-class > div{
+	background-image:url(../Image/Map/waterBG.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }

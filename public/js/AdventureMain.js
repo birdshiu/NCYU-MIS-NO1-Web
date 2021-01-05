@@ -38,7 +38,6 @@ function scrollToNextLayer(){
 	
 	html.style.scrollBehavior='smooth';//設成平滑卷動
 	/*scroll-behavior:smooth;讓 html 卷得平滑*/
-	
 	window.scroll({
 		top:adventureTds[currentLayer].offsetTop,
 		left:0,
@@ -113,7 +112,61 @@ function setLayer1(){//第一層的佈景
 	setItem(2, 10, 1, 1, 1, Items['sign4']);
 	setItem(2, 17, 1, 1, 1, Items['sign5']);
 	
-	setItem(2, 18, 0, 2, 2, Items['waterfall']);
+	setItem(2, 18, 0, 2, 2, Items['ladder2']);
+}
+
+function setLayer2(){
+	//water
+	for(let i=4;i<10;i++) setItem(1, 18, i, 2, 1, Items['water']);
+	for(let i=4;i<9;i++) setItem(1, 16, i, 2, 1, Items['water']);
+	for(let i=5;i<9;i++) setItem(1, 14, i, 2, 1, Items['water']);
+	for(let i=5;i<7;i++) setItem(1, 12, i, 2, 1, Items['water']);
+	setItem(1, 13, 4, 2, 1, Items['water']);
+	for(let i=0;i<4;i++) setItem(1, 16, i, 2, 1, Items['water']);
+	setItem(1, 16, 0, 2, 4, Items['waterfall']);
+	
+	//rock1
+	for(let i=14;i<18;i++) setItem(1, i, 9, 1, 1, Items['rock1']);
+	for(let i=12;i<14;i++) setItem(1, i, 7, 1, 1, Items['rock1']);
+	setItem(1, 13, 3, 1, 1, Items['rock1']);
+	setItem(1, 15, 4, 1, 1, Items['rock1']);
+	setItem(1, 11, 5, 1, 1, Items['rock1']);
+	setItem(1, 14, 0, 2, 2, Items['rock1']);
+	setItem(1, 14, 2, 2, 2, Items['rock1']);
+	setItem(1, 18, 0, 2, 2, Items['rock1']);
+	setItem(1, 18, 2, 2, 2, Items['rock1']);
+	for(let i=7;i<10;i++) setItem(1, 8, i, 1, 1, Items['rock1']);
+	for(let i=8;i<10;i++) setItem(1, 7, i, 1, 1, Items['rock1']);
+	setItem(1, 6, 9, 1, 1, Items['rock1']);
+	for(let i=0;i<3;i++) setItem(1, i, 8, 1, 1, Items['rock1']);
+	for(let i=5;i<9;i++)setItem(1, 3, i, 1, 1, Items['rock1']);
+	setItem(1, 5, 6, 1, 1, Items['rock1']);
+	setItem(1, 4, 7, 1, 1, Items['rock1']);
+	setItem(1, 6, 5, 1, 1, Items['rock1']);
+	setItem(1, 4, 4, 1, 1, Items['rock1']);
+	setItem(1, 5, 3, 1, 1, Items['rock1']);
+	setItem(1, 1, 5, 1, 1, Items['rock1']);
+	setItem(1, 1, 4, 1, 1, Items['rock1']);
+	setItem(1, 2, 3, 1, 1, Items['rock1']);
+	setItem(1, 3, 2, 1, 1, Items['rock1']);
+	setItem(1, 7, 2, 2, 2, Items['rock1']);
+	
+	//bamboo
+	for(let i=2;i<14;i+=2)setItem(1, i, 0, 2, 2, Items['bamboo1']);
+	
+	//互動物件
+	setItem(1, 11, 3, 2, 2, Items['climbrock']);
+	setItem(1, 11, 6, 1, 1, Items['throwrock']);
+	setItem(1, 8, 5, 2, 1, Items['tree']);
+	setItem(1, 4, 6, 1, 1, Items['pant']);
+	setItem(1, 9, 8, 2, 2, Items['lake']);
+	setItem(1, 13, 2, 1, 1, Items['rope']);
+	setItem(1, 0, 0, 2, 2, Items['ladder1']);
+	
+	//告式牌
+	setItem(1, 5, 7, 1, 1, Items['sign6']);
+	setItem(1, 13, 8, 1, 1, Items['sign7']);
+	setItem(1, 1, 6, 1, 1, Items['sign8']);
 }
 
 window.onload=function(){//初始化的部份
@@ -159,8 +212,8 @@ window.onload=function(){//初始化的部份
 	adventureDivs[currentLayer].appendChild(roleImage);
 	adventureDivs[currentLayer].addEventListener('click', adventureDivEvent);
 	setRole(2, 9);
-
 	setLayer1();
+	setLayer2();
 }
 
 

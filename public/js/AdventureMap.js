@@ -15,7 +15,7 @@ var Items={
 	'brick':{id: 8, img:'./Image/Map/brick.png', funct:normalItemEvent},
 	'coat':{id: 9, img:'./Image/Map/coat.png', funct:coatItemEvent},
 	'pavilion':{id: 10, img:'./Image/Map/pavilion.png', funct:pavilionItemEvent},
-	'waterfall':{id: 11, img:'./Image/Map/waterfall.png', funct:waterfallItemEvent},
+	'waterfall':{id: 11, img:'./Image/Map/waterfall.png', funct:normalItemEvent},
 	'house':{id: 12, img:'./Image/Map/house.png', funct:houseItemEvent},
 	'sign1':{id: 13, img:'./Image/Map/sign.png', funct:sign1ItemEvent},
 	'sign2':{id: 14, img:'./Image/Map/sign.png', funct:sign2ItemEvent},
@@ -24,7 +24,19 @@ var Items={
 	'sign5':{id: 17, img:'./Image/Map/sign.png', funct:sign5ItemEvent},
 	'rock5':{id: 18, img:'./Image/Map/rock5.png', funct:rock5ItemEvent},
 	'bamboo1':{id: 19, img:'./Image/Map/bamboo1.png', funct:normalItemEvent},
-	'bamboo2':{id: 20, img:'./Image/Map/bamboo2.png', funct:normalItemEvent}
+	'bamboo2':{id: 20, img:'./Image/Map/bamboo2.png', funct:normalItemEvent},
+	'ladder1':{id: 21, img:'./Image/Map/ladder1.png', funct:ladder1ItemEvent},
+	'ladder2':{id:22, img:'./Image/Map/ladder2.png', funct:ladder2ItemEvent},
+	'throwrock':{id:23, img:'./Image/Map/rock2.png', funct:throwrockItemEvent},
+	'climbrock':{id:24, img:'./Image/Map/rock2.png', funct:climbrockItemEvent},
+	'lake':{id:25, img:'./Image/Map/lake.png', funct:lakeItemEvent},
+	'tree':{id:26, img:'./Image/Map/tree.png', funct:treeItemEvent},
+	'rope':{id:27, img:'./Image/Map/rope.png', funct:ropeItemEvent},
+	'pant':{id:28, img:'./Image/Map/pant.png', funct:pantItemEvent},
+	'water':{id:29, img:'./Image/Map/water.png', funct:normalItemEvent},
+	'sign6':{id:30, img:'./Image/Map/sign.png', funct:sign6ItemEvent},
+	'sign7':{id:31, img:'./Image/Map/sign.png', funct:sign7ItemEvent},
+	'sign8':{id:32, img:'./Image/Map/sign.png', funct:sign8ItemEvent}
 };
 /*
 *************
@@ -103,8 +115,11 @@ function pavilionItemEvent(){
 function waterfallItemEvent(){
 	event.stopPropagation();
 	clickedItemId=11;
-	alert('之後就在鳳凰瀑布探索啦~~~');
-	scrollToNextLayer();
+	if(isRoleAround()){
+		alert('之後就在鳳凰瀑布探索啦~~~');
+		scrollToNextLayer();
+	}
+	
 }
 
 function houseItemEvent(){
@@ -152,7 +167,7 @@ function sign5ItemEvent(){
 	event.stopPropagation();
 	clickedItemId=17;
 	if(isRoleAround()){
-		alert('恭喜你用滑鼠走到了鳳凰瀑布');
+		alert('獻上走步道的剪片');
 	}
 }
 
@@ -164,6 +179,102 @@ function rock5ItemEvent(){
 	}
 }
 
+function ladder1ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=21;
+	if(isRoleAround()){
+		alert('我們探索完瀑布後，又必需走那步道回去...，走到快往生');
+		scrollToNextLayer();
+	}
+}
+
+function ladder2ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=22;
+	if(isRoleAround()){
+		alert('走完步道後，就在鳳凰瀑布探索啦~~~');
+		scrollToNextLayer();
+	}
+}
+
+function throwrockItemEvent(){
+	event.stopPropagation();
+	clickedItemId=23;
+	if(isRoleAround()){
+		alert('無聊打水漂');
+		window.open('https://drive.google.com/file/d/1htr0P1vt82g84WoAKftz3WaviW4pQQJk/view?usp=sharing', '水漂', 100, 100);
+	}
+}
+
+function climbrockItemEvent(){
+	event.stopPropagation();
+	clickedItemId=24;
+	if(isRoleAround()){
+		alert('爬石頭');
+		window.open('https://drive.google.com/file/d/1xslu7nDAbyWF28Eka_Nh04eEzwGjmQai/view?usp=sharing', '爬石頭', 100, 100);
+	}
+}
+
+function lakeItemEvent(){
+	event.stopPropagation();
+	clickedItemId=25;
+	if(isRoleAround()){
+		alert('瀑布的清水');
+		window.open('https://drive.google.com/file/d/1Axc7Tu9A2LrF-S3bUchSMbOBO0CSHnH-/view?usp=sharing', '瀑布的清水', 100, 100);
+	}
+}
+
+function treeItemEvent(){
+	event.stopPropagation();
+	clickedItemId=26;
+	if(isRoleAround()){
+		alert('我們有看到一根木頭，本來想拿它來當紀念品，不過後來想想還是算了');
+		window.open('https://drive.google.com/file/d/1UZ8a_pnBkaKQlqHzQggJaOY4Rksq673v/view?usp=sharing', '木頭', 100, 100);
+	}
+}
+
+function ropeItemEvent(){
+	event.stopPropagation();
+	clickedItemId=27;
+	if(isRoleAround()){
+		alert('不知為啥，在玩繩子');
+		window.open('https://drive.google.com/file/d/1xxUhX2qaNts0DG6lClSqnTD1gID1KRG_/view?usp=sharing', '繩子', 100, 100);
+	}
+}
+
+function pantItemEvent(){
+	event.stopPropagation();
+	clickedItemId=28;
+	if(isRoleAround()){
+		alert('要玩水的話記得要多帶些衣物，尤其是褲子，不然跌下水裡就麻煩了');
+	}
+}
+
+function sign6ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=30;
+	if(isRoleAround()){
+		alert('到達瀑布後，我們有拍個合照');
+		window.open('https://drive.google.com/file/d/1Mp7DRqGCiNvgx2Cqu-VoUoU51Mq3xjbD/view?usp=sharing', '合照', 100, 100);
+	}
+}
+
+function sign7ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=31;
+	if(isRoleAround()){
+		alert('瀑布的景觀');
+		window.open('https://drive.google.com/file/d/14scFBJ7N5RtZ0Y-Y3iKLKmeikN3EcneK/view?usp=sharing', '鳳凰技瀑布景觀', 100, 100);
+	}
+}
+
+function sign8ItemEvent(){
+	event.stopPropagation();
+	clickedItemId=32;
+	if(isRoleAround()){
+		alert('我們在那個瀑布晃滿久的，第一次看到那樣的景觀真的很興奮。(PS:有些石頭是可以點的哦，可以回去檢查看看)');
+	}
+}
 /*
 *************
 item function

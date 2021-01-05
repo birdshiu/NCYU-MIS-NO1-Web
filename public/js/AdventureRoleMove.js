@@ -190,30 +190,6 @@ function findPath(){
 			routine[2]=Down;
 			routine[3]=Right;
 		}
-		/*if(tmpY-1 >=0 && roleMap[tmpY-1][tmpX] === 0 && roadMap[currentLayer][tmpY-1][tmpX] === 0){
-			rolePath.push({x:tmpX, y:tmpY-1});
-			rolePathIndex++;
-			roleMap[tmpY-1][tmpX]=1;
-		}
-		else if(tmpX+1 < 20 && roleMap[tmpY][tmpX+1] === 0 && roadMap[currentLayer][tmpY][tmpX+1] === 0){
-			rolePath.push({x:tmpX+1, y:tmpY});
-			rolePathIndex++;
-			roleMap[tmpY][tmpX+1]=1;
-		}
-		else if(tmpY+1 < 10 && roleMap[tmpY+1][tmpX] === 0 && roadMap[currentLayer][tmpY+1][tmpX] === 0){
-			rolePath.push({x:tmpX, y:tmpY+1});
-			rolePathIndex++;
-			roleMap[tmpY+1][tmpX]=1;
-		}
-		else if(tmpX-1 >= 0 && roleMap[tmpY][tmpX-1] === 0 && roadMap[currentLayer][tmpY][tmpX-1] === 0){
-			rolePath.push({x:tmpX-1, y:tmpY});
-			rolePathIndex++;
-			roleMap[tmpY][tmpX-1]=1;
-		}
-		else{
-			rolePath.pop();
-			rolePathIndex--;
-		}*/
 		
 		for(let i=0;i<4;i++){
 			routine[i](tmpX, tmpY);
