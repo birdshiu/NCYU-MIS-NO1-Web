@@ -116,14 +116,6 @@ function setLayer1(){//第一層的佈景
 }
 
 function setLayer2(){
-	//water
-	for(let i=4;i<10;i++) setItem(1, 18, i, 2, 1, Items['water']);
-	for(let i=4;i<9;i++) setItem(1, 16, i, 2, 1, Items['water']);
-	for(let i=5;i<9;i++) setItem(1, 14, i, 2, 1, Items['water']);
-	for(let i=5;i<7;i++) setItem(1, 12, i, 2, 1, Items['water']);
-	setItem(1, 13, 4, 2, 1, Items['water']);
-	for(let i=0;i<4;i++) setItem(1, 16, i, 2, 1, Items['water']);
-	setItem(1, 16, 0, 2, 4, Items['waterfall']);
 	
 	//rock1
 	for(let i=14;i<18;i++) setItem(1, i, 9, 1, 1, Items['rock1']);
@@ -150,6 +142,17 @@ function setLayer2(){
 	setItem(1, 2, 3, 1, 1, Items['rock1']);
 	setItem(1, 3, 2, 1, 1, Items['rock1']);
 	setItem(1, 7, 2, 2, 2, Items['rock1']);
+	setItem(1, 16, 0, 1, 1, Items['rock1']);
+	setItem(1, 17, 0, 1, 1, Items['rock1']);
+	
+	//water
+	for(let i=4;i<10;i++) setItem(1, 18, i, 2, 1, Items['water']);
+	for(let i=4;i<9;i++) setItem(1, 16, i, 2, 1, Items['water']);
+	for(let i=5;i<9;i++) setItem(1, 14, i, 2, 1, Items['water']);
+	for(let i=5;i<7;i++) setItem(1, 12, i, 2, 1, Items['water']);
+	setItem(1, 13, 4, 2, 1, Items['water']);
+	for(let i=1;i<4;i++) setItem(1, 16, i, 2, 1, Items['water']);
+	setItem(1, 16, 0, 2, 4, Items['waterfall']);
 	
 	//bamboo
 	for(let i=2;i<14;i+=2)setItem(1, i, 0, 2, 2, Items['bamboo1']);
