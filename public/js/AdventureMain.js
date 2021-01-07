@@ -110,7 +110,7 @@ function setLayer1(){//第一層的佈景
 	setItem(2, 16, 6, 1, 1, Items['sign2']);
 	setItem(2, 2, 0, 1, 1, Items['sign3']);
 	setItem(2, 10, 1, 1, 1, Items['sign4']);
-	setItem(2, 17, 1, 1, 1, Items['sign5']);
+	setItem(2, 17, 0, 1, 1, Items['sign5']);
 	
 	setItem(2, 18, 0, 2, 2, Items['ladder2']);
 }

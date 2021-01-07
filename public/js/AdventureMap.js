@@ -247,6 +247,8 @@ function pantItemEvent(){
 	clickedItemId=28;
 	if(isRoleAround()){
 		alert('要玩水的話記得要多帶些衣物，尤其是褲子，不然跌下水裡就麻煩了');
+		alert('像這樣(PS:傷眼注意)');
+		window.open('https://drive.google.com/file/d/1BusZuCIrAE6qsB57Z-XKGBbTvUcGtfun/view?usp=sharing', '跌下水', 100, 100);
 	}
 }
 
