@@ -99,7 +99,7 @@ function setLayer1(){//第一層的佈景
 	setItem(2, 0, 8, 2, 2, Items['ncyu']);
 	setItem(2, 17, 8, 3, 2, Items['township']);
 	setItem(2, 0, 2, 2, 2, Items['pavilion']);
-	for(let i=5;i<9;i++) setItem(2, i, 3, 1, 1, Items['house']);
+	for(let i=5;i<9;i++) setItem(2, i, 3, 1, 1, Items['house1']);
 	
 	//其它
 	setItem(2, 18, 5, 1, 1, Items['coat']);
@@ -172,6 +172,51 @@ function setLayer2(){
 	setItem(1, 1, 6, 1, 1, Items['sign8']);
 }
 
+function setLayer3(){
+	//platform2
+	for(let i=2;i<8;i+=2) setItem(0, 0, i, 2, 2, Items['platform2']);
+	for(let i=14;i<19;i+=2) setItem(0, i, 2, 2, 2, Items['platform2']);
+	for(let i=16;i<19;i+=2) setItem(0, i, 4, 2, 2, Items['platform2']);
+	
+	//rock1
+	for(let i=6;i<10;i++) setItem(0, 4, i, 1, 1, Items['rock1']);
+	for(let i=5;i<7;i++) setItem(0, i, 6, 1, 1, Items['rock1']);
+	for(let i=9;i<11;i++) setItem(0, i, 6, 1, 1, Items['rock1']);
+	for(let i=6;i<10;i++) setItem(0, 11, i, 1, 1, Items['rock1']);
+	
+	//rock2
+	for(let i=2;i<5;i++) setItem(0, 2, i, 1, 1, Items['rock2']);
+	for(let i=3;i<6;i++) setItem(0, i, 3, 1, 1, Items['rock2']);
+	for(let i=5;i<8;i++) setItem(0, i, 2, 1, 1, Items['rock2']);
+	
+	for(let i=0;i<3;i++) setItem(0, 9, i, 1, 1, Items['rock2']);
+	setItem(0, 10, 2, 1, 1, Items['rock2']);
+	setItem(0, 11, 3, 1, 1, Items['rock2']);
+	setItem(0, 12, 4, 1, 1, Items['rock2']);
+	for(let i=5;i<7;i++) setItem(0, 13, i, 1, 1, Items['rock2']);
+	for(let i=16;i<20;i++) setItem(0, i, 6, 1, 1, Items['rock2']);
+	
+	//互動物件
+	setItem(0, 0, 0, 1, 2, Items['lover']);
+	setItem(0, 5, 7, 2, 3, Items['slide']);
+	setItem(0, 7, 8, 1, 2, Items['statue']);
+	setItem(0, 8, 8, 3, 2, Items['temple']);
+	setItem(0, 5, 1, 1, 1, Items['dog']);
+	setItem(0, 6, 1, 1, 1, Items['house2']);
+	setItem(0, 3, 1, 2, 2, Items['excavator']);
+	setItem(0, 12, 8, 2, 2, Items['bush1']);
+	setItem(0, 17, 8, 3, 2, Items['bridge']);
+	setItem(0, 10, 0, 2, 2, Items['eatery']);
+	setItem(0, 18, 0, 2, 2, Items['backncyu']);
+	
+	//sign
+	setItem(0, 1, 8, 1, 1, Items['sign9']);
+	setItem(0, 6, 5, 1, 1, Items['sign10']);
+	setItem(0, 7, 1, 1, 1, Items['sign11']);
+	setItem(0, 16, 9, 1, 1, Items['sign12']);
+	setItem(0, 12, 3, 1, 1, Items['sign13']);
+}
+
 window.onload=function(){//初始化的部份
 
 	for(let i=0;i<3;i++){ //Map初始化
@@ -217,6 +262,7 @@ window.onload=function(){//初始化的部份
 	setRole(2, 9);
 	setLayer1();
 	setLayer2();
+	setLayer3();
 }
 
 
