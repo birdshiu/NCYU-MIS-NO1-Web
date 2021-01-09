@@ -50,10 +50,11 @@ table, tr, td{
 }
 
 .layer-zero-td-background-class{
-	background-image:url(../Image/AboutFanluBackground.jpg);
+	background-image:url(../Image/adventure-background-0.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .layer-zero-td-background-class > div{
 	background-image:url(../Image/Map/mudBG.png);
 	background-size: cover;
@@ -61,7 +62,7 @@ table, tr, td{
 }
 
 .layer-one-td-background-class{
-	background-image:url(../Image/AdventureBackground1.jpg);
+	background-image:url(../Image/adventure-background-1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -73,7 +74,13 @@ table, tr, td{
 }
 
 .layer-two-td-background-class{
-	background-image:url(../Image/AdventureBackground2.jpg);
+	background-image:url(../Image/adventure-background-2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.layer-two-td-background-class > div{
+	background-image:url(../Image/Map/grassBG.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }

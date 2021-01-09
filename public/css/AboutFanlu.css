@@ -1,14 +1,131 @@
-﻿body{
-	background-image:url(../Image/AboutFanluBackground.jpg);
+﻿*{
+	padding: 0px;
+	margin:0px;
+	text-decoration: none;
+	text-emphasis: none;
+	list-style: none;
+	box-sizing: border-box;/*元素的內距和邊框將不會增加元素本身的寬度*/
+}
+
+body{
+	background-image:url(../Image/M1.jpg);/*AboutFanluBackground.jpg*/
 	background-size: cover;　/*設定背景圖片的填滿方式*/
 	background-repeat: no-repeat;
-	position:fixed;
-	font-family: fantasy;
-	font-style: italic;
+	width: 100%;
+	height:100%;
+/*	position:fixed;
+*/	font-family: montserrat;
+	/*background:aquamarine;*/
+}
+
+nav{	/*導覽列*/
+	background-color:#0082e6;
+	height:80px; 
+	width: 100%;
+	position: fixed;
+}
+
+nav ul{
+float: right;
+margin-right: 20px: 
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin:0 5px;
+}
+
+nav ul li a{
+	color: white;
+	font-size: 25px;
+	text-transform: uppercase;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+
+a.active,a:hover{
+	background: #1b9bff;
+	transition: .5s; 
+}
+
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#check{
+	display: none;
+}
+
+@media (max-width:952px) {
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+
+@media (max-width:858px) {
+	.checkbtn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height:100vh;
+		background:#2c3e50;
+		top:80px;
+		left:-100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;		
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	a:hover,a.active{
+		background:none;
+		color: #0082e6;
+	}
+	#check:checked ~ ul{
+		left:0;
+	}
+}
+
+@media (min-width:500px) {
+	.bulletin_board{
+		position:fixed;	
+		top:18%;
+		left:5%;
+		height: 80%;
+		width: 	100%;
+	}
+}
+
+label.logo{
+	color:white;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;	
+	font-style: fantasy;
+	font-size: 40px;
+	text-align: center;
 }
 
 .wrapper{
-	width:1500px;
+	width:2000px;
 	background-color: transparent;
 }
 
@@ -66,36 +183,39 @@
 	left:470px;
 }
 
-li{
+
+
+/*li{
 	margin:10px;
 	list-style: none;
-	float: left;
-	width: 10%;
+	/*float: left;
+	width: 150px;
 	text-align: center;
 	background-color: blue;
 	color:white;
 	border-radius: 30px;
-}
+}*/
 
-li a{
+/*li a{
 	color:white;
 	font-size: 24px;
 	text-decoration: none;
-}
+}*/
 
-li:hover{
+/*li:hover{
 	background-color:#00A600; 
 }
-
+*/
 .map {
-	position: absolute;
-	left: 800px;
-	top: 50px;
+	background-color: white;
+	position: fixed;
+	left: 65%;
+	top: 12%;
 	width: 30%;
 	margin-right: 5%;
 	float: right;
 	text-align: center;
-	border: 10px outset black;
+	border: 10px outset green;
 	padding: 0px;
 	overflow: hidden;
 	/*overflow:hidden是為了隱藏在圖片放大時超出的部分*/
@@ -110,36 +230,46 @@ li:hover{
 	transform:scale(1.2,1.2);
 }
 
-.title{
+/*.title{
 	font-style: fantasy;
 	font-size: 40px;
 	text-align: center;
 	position: absolute;
 	top:120px;
 	left:600px;
+}*/
+
+.monkey{
+	position:fixed;	
+	top:30%;
+	left:85%;
+	width: 	10%;
+	z-index: 1000;
+
+
 }
 
 .bulletin_board{
-	position: 	absolute;	
-	top:120px;
-	left:20px;
+	position:fixed;	
+	top:18%;
+	left:5%;
 	width: 	35%;
 }
 
 .Dora{
 	height:100px;
-	position: 	absolute;	
-	top:380px;
-	left:500px;
+	position: fixed;	
+	top:60%;
+	left:32%;
 }
 
 .context{
 	font-family: DFKai-sb;
-	font-size: 25px;
-	position: 	absolute;
+	font-size: 30px;
+	position: 	fixed;
 	/*z-index:999;*/
-	top:200px;
-	left:120px;
+	top:35%;
+	left:12%;
 	width:22%;
 	overflow: hidden;
 	display: -webkit-box;
@@ -148,108 +278,9 @@ li:hover{
 	cursor:help;
 }
 
-@media (min-width:1500px) {
-	.Dora {
-		height: 100px;
-		position: absolute;
-		top: 380px;
-		left: 560px;
-	}
-
-	body {
-		background-image: url(../Image/AboutFanluBackground.jpg);
-		background-size: cover;
-		　
-		/*設定背景圖片的填滿方式*/
-		background-repeat: no-repeat;
-		position: fixed;
-		font-family: fantasy;
-		font-style: italic;
-	}
-
-	.map {
-		width: 30%;
-		margin-right: 5%;
-		float: right;
-		text-align: center;
-		border: 15px outset black;
-		padding: 0px;
-		overflow: hidden;
-		/*overflow:hidden是為了隱藏在圖片放大時超出的部分*/
-		transform: scale(1,1);
-		/*transform可以設定圖片放大的倍率*/
-		transition: all 0.5s ease-out;
-		/*transition可以做出圖片緩慢放大的效果，
-	為圖片放大所需的時間和特效*/
-	}
-
-	.bulletin_board {
-		position: absolute;
-		top: 120px;
-		left: 20px;
-		width: 35%;
-	}
-}
-
-@media (min-width:1600px){
-	.Dora {
-		height: 100px;
-		position: absolute;
-		top: 500px;
-		left: 620px;
-	}
-	body {
-		background-image: url(../Image/AboutFanluBackground.jpg);
-		background-size: cover;
-		　 /*設定背景圖片的填滿方式*/
-		background-repeat: no-repeat;
-		position: fixed;
-		font-family: fantasy;
-		font-style: italic;
-	}
-	.map {
-		position: absolute;
-		left: 1200px;
-		top: 50px;
-		width: 30%;
-		margin-right: 5%;
-		float: right;
-		text-align: center;
-		border: 10px outset black;
-		padding: 0px;
-		overflow: hidden;
-		/*overflow:hidden是為了隱藏在圖片放大時超出的部分*/
-		transform: scale(1,1);
-		/*transform可以設定圖片放大的倍率*/
-		transition: all 0.5s ease-out;
-		/*transition可以做出圖片緩慢放大的效果，
-	為圖片放大所需的時間和特效*/
-	}
-	.bulletin_board{
-	position: 	absolute;	
-	top:120px;
-	left:20px;
-	width: 	45%;
-}
-	.title {
-		font-style: fantasy;
-		font-size: 80px;
-		text-align: center;
-		position: absolute;
-		top: 120px;
-		left: 700px;
-	}
-	.context {
-		font-family: DFKai-sb;
-		font-size: 25px;
-		position: absolute;
-		/*z-index: 999;*/
-		top: 250px;
-		left: 150px;
-		width: 28%;
-		overflow: hidden;
-		display: -webkit-box;
-		-webkit-line-clamp: 15;
-		-webkit-box-orient: vertical;
-	}
+ul.slides{
+	position: relative;
+	width: 600px;
+	height: 200px;
+	background-color: gray;
 }

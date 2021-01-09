@@ -3,27 +3,50 @@
 		<meta charset="UTF-8">
 		<title>關於番路</title>
 		<link rel="stylesheet" href="./CSS/AboutFanlu.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 		<script src="./js/jquery.min.js"></script>
 	</head>    
 	<body>
-		<div class="wrapper">
-			<ul class="nav-area">
-				<li><a href="./Index.html">主頁面</a></li>
-				<li><a href="./Member.html">成員介紹</a></li>
-				<li><a href="./Adventure.html">番路GOGO!</a></li>
-				<li><a href="./Gallery.html">旅途紀錄</a></li>
-			</ul>
-		</div>
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<label class="logo">番路鄉</label>
+<!-- 			<div class="wrapper"> -->
+				<ul class="nav-area">
+					<li><a href="./Index.html">主頁面</a></li>
+					<li><a href="./Member.html">成員介紹</a></li>
+					<li><a class="active" href="./AboutFanlu.html">番路簡介</a></li>
+					<li><a href="./Adventure.html">番路GOGO!</a></li>
+					<li><a href="./Gallery.html">旅途紀錄</a></li>
+				</ul>
+<!-- 			</div> -->
+		</nav>
+	
+<!-- 		<ul class="slides">
+			<li class="slide">1</li>
+			<li class="slide">2</li>
+			<li class="slide">3</li>
+			<li class="slide">4</li>
+			<li class="slide">5</li>
+			<li class="slide">6</li>
+		</ul> -->
 
 		<div>
 			<image class="bulletin_board" src="./Image/BulletinBoard.png">
 		</div>
 
+		<div>
+			<image class="monkey" src="./Image/monkey.png">
+		</div>
+		
+		<a href="要前往的連結網址"><img src="圖片 URL" border="0"></a>
 		<div class="map">
 			<image src="./Image/map.png">
 		</div>
-
-		<div class="title">番路鄉</div>
+<!-- 
+		<div class="title">番路鄉</div> -->
 
 		<div class="context" id="context">
 			<p>昔稱番仔路的番路鄉，據說原是諸羅城通往阿里山鄒族部落的必經通道，也是鄒人到嘉義交換貨物的必經之地。那條番仔路，如今的縣道159，曾經是族人背著獵物步行下山、與漢人交易的古道，如今成了雙向通車、鋪著柏油的馬路。路的兩旁，種了滿山遍野的柿子林，每到秋天便染紅了整座山頭，產量高居全國第一。鄉民自行研發的柿餅製作技法，讓番路成了火紅火紅的柿子之鄉。
@@ -36,7 +59,7 @@
 		</div>
 
 		<div class="Dora">
-			<image src="./Image/Dora.png" width="70%">
+			<image src="./Image/Dora.png" width="60%">
 		</div>
 		
 		<div id="popWindow" class="popWindow">
