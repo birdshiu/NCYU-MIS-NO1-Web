@@ -24,6 +24,48 @@ table, tr, td{
 	border:1px solid black;
 }
 
+nav{	/*導覽列*/
+	background-color:#0082e6;
+	height:80px; 
+	width: 100%;
+	position: fixed;
+}
+
+nav ul{
+	float: right;
+	margin-right: 20px;
+	margin-top:0px;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin:0 5px;
+}
+
+nav ul li a{
+	color: white;
+	font-size: 25px;
+	text-transform: uppercase;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+
+a.active,a:hover{
+	background: #1b9bff;
+	transition: .5s; 
+}
+
+label.logo{
+	color:white;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;	
+	font-style: fantasy;
+	font-size: 40px;
+	text-align: center;
+}
+
 .navigator-div{
 	position:fixed;
 	left:-140px;
