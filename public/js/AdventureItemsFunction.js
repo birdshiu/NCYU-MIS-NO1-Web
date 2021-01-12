@@ -91,7 +91,7 @@ function sign1ItemEvent(){
 	clickedItemId=13;
 	if(isRoleAround()){
 		alert('旅途開始!!!');
-		bgm.play();
+		bgm1.play();
 	}
 }
 
@@ -140,6 +140,8 @@ function ladder1ItemEvent(){
 	clickedItemId=21;
 	if(isRoleAround()){
 		alert('我們探索完瀑布後，又必需走那步道回去...，走到快往生');
+		bgm2.pause();
+		bgm3.play();
 		scrollToNextLayer();
 	}
 }
@@ -149,6 +151,8 @@ function ladder2ItemEvent(){
 	clickedItemId=22;
 	if(isRoleAround()){
 		alert('走完步道後，就在鳳凰瀑布探索啦~~~');
+		bgm1.pause();
+		bgm2.play();
 		scrollToNextLayer();
 	}
 }
@@ -184,7 +188,7 @@ function treeItemEvent(){
 	event.stopPropagation();
 	clickedItemId=26;
 	if(isRoleAround()){
-		alert('我們有看到一根木頭，本來想拿它來當紀念品，不過後來想想還是算了');
+		alert('我們有看到一根木頭，想拿它來當紀念品');
 		window.open('https://drive.google.com/file/d/1UZ8a_pnBkaKQlqHzQggJaOY4Rksq673v/view?usp=sharing', '木頭', 100, 100);
 	}
 }
@@ -394,7 +398,8 @@ function backncyuItemEvent(){
 	event.stopPropagation();
 	clickedItemId=48;
 	if(isRoleAround()){
-		alert('感謝你耐心體驗完我們的完整旅途');
+		alert('感謝你耐心體驗完我們的完整旅途，最後為你送上我們剪輯的影片');
+		window.open('https://drive.google.com/file/d/1DFWKyevDWQlo4rjgTMuclubDJuSzv1Ow/view?usp=sharing', '剪輯影片', 100, 100);
 		window.location='/';
 	}
 }
