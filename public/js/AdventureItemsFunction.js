@@ -90,7 +90,8 @@ function sign1ItemEvent(){
 	event.stopPropagation();
 	clickedItemId=13;
 	if(isRoleAround()){
-		alert('還不知要打什麼');
+		alert('旅途開始!!!');
+		bgm.play();
 	}
 }
 
@@ -122,7 +123,7 @@ function sign5ItemEvent(){
 	event.stopPropagation();
 	clickedItemId=17;
 	if(isRoleAround()){
-		alert('獻上走步道的剪片');
+		alert('恭喜你走到了鳳凰瀑布');
 	}
 }
 
@@ -281,7 +282,7 @@ function dogItemEvent(){
 	event.stopPropagation();
 	clickedItemId=37;
 	if(isRoleAround()){
-		alert('死狗，我們經過時會一直吠，還兩隻。(PS:我們忘了拍死狗，等等的影片會有)');
+		alert('笨狗，我們經過時會一直吠，還兩隻。');
 	}
 }
 
@@ -313,7 +314,7 @@ function loverItemEvent(){
 		let intervalId=setInterval(()=>{
 			if(tmpWindow.window === null){
 				clearInterval(intervalId);
-				alert('情人瀑布的回程影片(PS:有死狗)');
+				alert('情人瀑布的回程影片(PS:有笨狗)');
 				window.open('https://drive.google.com/file/d/1ZQ0YcGxES7kvuUSgahTbUJxjRvUT74Ll/view?usp=sharing', '情人瀑布回程', 100, 100);
 			}
 		}, 1000);

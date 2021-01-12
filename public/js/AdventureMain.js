@@ -4,6 +4,8 @@ var adventureTds=document.getElementsByTagName('td');
 var html=document.getElementsByTagName('html')[0]; //設定 scroll behavior 要用到的
 var roleImage=document.createElement('img');
 var currentLayer=2;
+var bgm=new Audio('蓄勢-GEAR UP.mp3');
+bgm.loop=true;
 
 var BasicW, BasicH;
 const XStep=20;

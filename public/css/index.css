@@ -2,13 +2,8 @@
 	margin: 0;
 	padding: 0;
 }
-body {
-	font-family: 'Poppins', sans-serif;
-	background-image:url(../Image/IndexBackground.png);
-}
 .wrapper {
-	width: 1150px;
-	margin: auto;
+	/*width: 1150px;*/
 }
 .nav-area {
 	float: right;
@@ -71,7 +66,15 @@ body {
 }
 
 .welcome-text img{
-	height:500px;
+	height:300px;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-image:url(../Image/IndexBackground.png);
+	background-size:cover;
+	 background-repeat: no-repeat;
+	overflow:hidden;
 }
 /*resposive*/
 
