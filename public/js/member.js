@@ -53,6 +53,6 @@ memberDiv[4].addEventListener('click', ()=>{
 
 memberDiv[5].addEventListener('click', ()=>{ 
 	popWindow.style.display='initial';
-	popWindowDetail.innerHTML="<h2><br>李彥賢(帥哥)<br><br>出生:未知(看起來像28歲)<br><br>興趣:逛COSTCO、教課<br><br>專長:機器學習、文字探勘、大數據分析......等";
+	popWindowDetail.innerHTML="<h2><br>李彥賢(帥哥教授)<br><br>出生:未知(看起來像28歲)<br><br>興趣:逛COSTCO、教課<br><br>專長:機器學習、文字探勘、大數據分析......等";
 	centerHandler();
 });
