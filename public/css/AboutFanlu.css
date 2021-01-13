@@ -104,12 +104,21 @@ a.active,a:hover{
 	}
 }
 
-@media (min-width:500px) {
+@media (min-width:500px) and (min-height:720px){
 	.bulletin_board{
 		position:fixed;	
 		top:18%;
 		left:5%;
 		height: 80%;
+		width: 	100%;
+	}
+}
+@media  (max-height:660px){
+	.bulletin_board{
+		position:fixed;	
+		top:18%;
+		left:5%;
+		height: 60%;
 		width: 	100%;
 	}
 }
